@@ -1,6 +1,6 @@
 # CryptoCurrencyListing
 
-I have used CdkDragDrop for drag and drop function. And for the api i have used https://www.coingecko.com/en/api. For showing the data I have used angular material table, I also pipe the numbers with shortNumber to converts big numbers to short numbers with suffix. As for the pagination again i have used angular material paginator, which alows only five items per page. The search function is also there, due to some problem mat input wasn't working properly so i had to use normal search input. As I am not really much familiar with MongoDb i couldn't implement the save and delete function. Thank you...
+I have used CdkDragDrop for drag and drop function. And for the api I have used https://www.coingecko.com/en/api. For showing the data I have used angular material table, I also pipe the numbers with shortNumber to converts big numbers to short numbers with suffix. As for the pagination again i have used angular material paginator, which alows only five items per page. The search function is also there, due to some problem mat input wasn't working properly so i had to use normal search input. As I am not really much familiar with MongoDb i couldn't implement the save and delete function. Thank you...
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
