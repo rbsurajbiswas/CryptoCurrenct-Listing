@@ -1,0 +1,44 @@
+<!-- <form class="example-form">
+    <mat-form-field>
+        <mat-label>Enter Currency name</mat-label>
+        <input matInput placeholder="Ex. Bitcoin" (keyup)="search($event)">
+    </mat-form-field>
+  </form> -->
+  <div class='containerS'>
+    <input type="text" id="searchInput" (keyup)="search($event)" placeholder="Enter Currency name">
+  </div>
+  <br>
+  <br>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="table-striped table-responsive-md btn-table" style="width: 100%; margin-left: auto; margin-right: auto;">
+      
+      <ng-container matColumnDef="name">
+        <th *matHeaderCellDef class="info" style="text-align: center;"> COMPANY NAME </th>
+        <td *matCellDef="let element" style="text-align: center;"><p style="width: 100%;">{{element.name}}</p></td>
+      </ng-container>
+  
+      <ng-container matColumnDef="symbol">
+        <th *matHeaderCellDef style="text-align: center;"> SYMBOL </th>
+        <td *matCellDef="let element" style="text-align: center;" ><p style="color: blue; width: 100%;">{{element.symbol}}</p></td>
+      </ng-container>
+  
+      <ng-container matColumnDef="marketcap">
+        <th *matHeaderCellDef style="text-align: center;"> MARKET CAP </th>
+        <td *matCellDef="let element" style="font-size: 18px; font-weight: bold; text-align: center;"><p style="width: 100%;">${{element.market_cap | shortNumber}} USD</p></td>
+      </ng-container>
+
+      <ng-container matColumnDef="button">
+        <th *matHeaderCellDef></th>
+        <td *matCellDef="let element"><button mdbBtn type="button" color="primary" outline="true" mdbWavesEffect style="border-radius: 6px; width: 100%;">Save Data</button></td>
+      </ng-container>
+  
+      <ng-container matColumnDef="currentprice">
+        <th *matHeaderCellDef style="text-align: center;"> CURRENT PRICE </th>
+        <td *matCellDef="let element" style="font-size: 18px; font-weight: bold; text-align: center;"><p style="width: 100%;">${{element.current_price | shortNumber}} USD</p></td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5]" hidePageSize></mat-paginator>
+  </div>

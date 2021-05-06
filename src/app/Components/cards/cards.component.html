@@ -1,0 +1,7 @@
+<div cdkDropList cdkDropListOrientation="horizontal" class="company-list" (cdkDropListDropped)="drop($event)">
+    <div class="company-box" *ngFor="let company of companies" cdkDrag>
+      <p style="display: inline; margin-bottom: auto;">{{company.name}}</p>
+      <img style="max-width: 60px; display: inline; margin-left: 200px;" src="{{company.logo}}" alt="Company Logo">
+      <p style="font-size: 40px; text-align: center;">{{company.price}}</p>
+    </div>
+  </div>
